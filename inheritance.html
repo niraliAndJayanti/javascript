@@ -1,0 +1,48 @@
+<html>
+<body>
+
+<div>So this animal can <div class="example">_____</div></div>
+
+
+<button onclick="myFunction()">Try it</button>
+
+<p><strong>Note:</strong> The getElementsByClassName() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+<script>
+
+
+
+
+class mammal {
+    constructor(size){
+        this.size = size;
+        console.log("i am mammal...");
+    }
+}
+
+class animal extends mammal{
+    constructor(voice , fur){
+        suoer("large");
+        this.voice = voice;
+        this.fur = fur;
+        console.log("i am animal...");
+    }
+}
+
+class Dog extends animal{
+    constructor(legs){
+        super("bark" , false);
+        this.legs = legs;
+        
+        console.log("i am dog...");
+    }
+}
+
+function myFunction(){
+    dog = new Dog(4);
+
+}
+</script>
+
+</body>
+</html>
