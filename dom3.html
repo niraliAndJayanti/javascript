@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Finding HTML Elements by Tag Name</h2>
+
+<p id="one">Hello World! </p>
+<p id="two"></p>
+<p id="one">jhucc</p>
+<a href="https://www.google.com"> hello world</a>
+<button onclick="fun(document.getElementsByTagName('a'))">Facebook</button>
+
+<script>
+    var check = false
+    function fun(element){
+        if(check){
+            element[0].href = "https://www.google.com"
+            document.getElementsByTagName("button")[0].innerHTML = "Facebook"
+        }else{
+            element[0].href = "https://www.facebook.com"
+            document.getElementsByTagName("button")[0].innerHTML = "Google"
+        }
+       
+        check = !check
+    }
+    
+</script>
+
+</body>
+</html>
