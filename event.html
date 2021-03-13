@@ -1,0 +1,59 @@
+<html>
+<body>
+
+
+<p onclick="someFunc(this)">Try it</p>
+
+
+<div>1</div>
+<div>2</div>
+<div>3</div>
+
+<script>
+    // var x = document.querySelectorAll("div");
+    var x = document.getElementsByTagName("div");
+    console.log(x)
+    var count = 3;
+    for(var i = 0 ; i < x.length ; i++){
+        divAttributes(x[i] , count);
+        console.log("hello");
+        count = count - 1;
+    }
+    // x.forEach(element => {
+    //     divAttributes(element , count);
+    //     console.log("hello");
+    //     count = count - 1;
+    // });
+
+    function someFunc(element){
+        element.innerHTML = "I Tried and it worked...";
+        element.style.fontSize = "16px";
+    }
+    function divAttributes(element , count){
+        element.style.position = "relative";
+        element.style.marginTop = "1rem";
+        element.style.height = "5rem";
+        element.style.width = "5rem";
+        element.style.borderRadius = "50%";
+        element.addEventListener("mouseover" , () => {
+            element.style.height = "10rem";
+            element.style.width = "10rem";
+        })
+        element.addEventListener("mouseout" , () => {
+            element.style.height = "5rem";
+            element.style.width = "5rem";
+        })
+        if(count == 1){
+            element.style.backgroundColor = "red";
+        }else if(count == 2){
+            element.style.backgroundColor = "blue";
+        }else if(count == 3){
+            element.style.backgroundColor = "green";
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
